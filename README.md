@@ -106,4 +106,3 @@ MIT License. Use, modify, share.
 ## 👨‍💻 Author
 
 Dushmantha Walakulpola — Feel free to contribute or fork!
-```
