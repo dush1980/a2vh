@@ -1,8 +1,3 @@
-Sure! Here's the `README.md` content in proper **Markdown format** — you can copy and paste this directly into a `README.md` file in your project folder:
-
-```markdown
-# a2vh
-
 **a2vh** (Apache2 Virtual Host Manager) is a Bash script that simplifies creating and deleting Apache virtual hosts on Debian-based systems. It automates configuration file generation, site enabling/disabling, and Apache restarts — all from a single command.
 
 ---
