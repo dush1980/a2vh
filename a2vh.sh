@@ -5,6 +5,7 @@ echo 'Manage Apache2 virtual host - V1.0
 
 # initial setup ---------------------
 
+gScriptLoc="$(dirname "$(readlink -f "$0")")"
 gSitesEnabled='/etc/apache2/sites-enabled/'
 gSitesAvailable='/etc/apache2/sites-available/'
 gDefultRootDir='/var/www/'
@@ -101,7 +102,7 @@ function createvh { #gDomain, gRootDir
 
     restartapache2
 
-    cat addhost_windows.hlp | more
+    cat ${gScriptLoc}/addhost_windows.hlp
 }
 
 function deletevh { #gDomain
@@ -134,13 +135,13 @@ function deletevh { #gDomain
 
     restartapache2
 
-    cat addhost_windows.hlp | more
+    cat ${gScriptLoc}/addhost_windows.hlp
 }
 
 # Main ----------------------------------------
 
 if [[ "$1" == -h ]]; then
-    cat virtualhost.hlp | more
+    cat ${gScriptLoc}/virtualhost.hlp | more
     winddown 0
 fi
 
@@ -183,7 +184,7 @@ case "$gAction" in
     delete)
         deletevh $gDomain;;
     help)
-        cat virtualhost.hlp | more;;
+        cat ${gScriptLoc}/virtualhost.hlp | more;;
     invalid|*)
         echo 'Error!! Stopping the script'
         winddown -1;;
