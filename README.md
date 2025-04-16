@@ -24,13 +24,13 @@
 Make the script executable:
 
 ```bash
-chmod +x virtualhost.sh
+chmod +x a2vh.sh
 ```
 
 (Optional) Rename and move to your path for global use:
 
 ```bash
-sudo mv virtualhost.sh /usr/local/bin/a2vh
+sudo mv a2vh.sh /usr/local/bin/a2vh
 ```
 
 ---
@@ -38,7 +38,7 @@ sudo mv virtualhost.sh /usr/local/bin/a2vh
 ## 🧰 Usage
 
 ```bash
-sudo ./virtualhost.sh <domain> [options]
+sudo ./a2vh.sh <domain> [options]
 ```
 
 ### Options
@@ -54,7 +54,7 @@ sudo ./virtualhost.sh <domain> [options]
 ### Create a new virtual host
 
 ```bash
-sudo ./virtualhost.sh example.local -p /var/www/example
+sudo ./a2vh.sh example.local -p /var/www/example
 ```
 
 This will:
@@ -66,7 +66,7 @@ This will:
 ### Delete a virtual host
 
 ```bash
-sudo ./virtualhost.sh example.local -d
+sudo ./a2vh.sh example.local -d
 ```
 
 This will:
@@ -90,7 +90,7 @@ This will:
 You must run the script as root:
 
 ```bash
-sudo ./virtualhost.sh ...
+sudo ./a2vh.sh ...
 ```
 
 If not, the script will exit with a warning.
@@ -105,7 +105,5 @@ MIT License. Use, modify, share.
 
 ## 👨‍💻 Author
 
-[Your Name] — Feel free to contribute or fork!
+Dushmantha Walakulpola — Feel free to contribute or fork!
 ```
-
-Let me know if you want this saved as a file or tailored further (e.g., inserting actual help text contents inline).
