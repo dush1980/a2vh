@@ -1,0 +1,44 @@
+Usage: virtualhost.sh <domain> [options]
+
+Manage Apache2 Virtual Hosts - V1.0
+
+Arguments:
+  <domain>             The domain name for the virtual host (e.g. example.com)
+
+Options:
+  -p <path>            Set the root directory for the virtual host (required when creating a site)
+  -d                   Delete the specified virtual host
+  -h                   Display this help and exit
+
+Description:
+  This script simplifies the creation and deletion of Apache2 virtual hosts.
+  When creating a new virtual host, it will:
+    - Generate the configuration file in /etc/apache2/sites-available/
+    - Enable the site using a2ensite
+    - Restart Apache2
+    - Prompt for backup if an existing config is found
+
+  When deleting a virtual host, it will:
+    - Disable the site using a2dissite
+    - Ask whether to remove the configuration file
+    - Restart Apache2
+
+Examples:
+  sudo ./virtualhost.sh example.com -p /var/www/example
+      Create a new virtual host for example.com with the specified root directory.
+
+  sudo ./virtualhost.sh example.com -d
+      Delete the virtual host for example.com.
+
+  ./virtualhost.sh -h
+      Show this help message.
+
+Notes:
+  - This script must be run as root (use sudo).
+  - Make sure to update your /etc/hosts file for local testing.
+
+AUTHOR
+    Written by DUshmantha Walakulpola
+
+COPYRIGHT
+    This is free software: you are free to change and redistribute it.
